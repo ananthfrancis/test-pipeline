@@ -14,4 +14,4 @@ parallel (
  }},
   mac: { node {
     sh "echo building on mac now"
- }}
+ }} )
