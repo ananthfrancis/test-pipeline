@@ -5,7 +5,7 @@ node {
    sh "docker build ."
 }
 
-input message: 'Do you want to deploy in UAT', ok: 'Okay'
+input message: 'Do you want to deploy in UAT', ok: 'Okay', submitter: 'test' 
 
 stage "UAT Deployment"
 node {
