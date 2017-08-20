@@ -1,8 +1,8 @@
-stage "unit test"
+stage "Docker Build"
 
 node {
    git "https://github.com/ananthfrancis/test-pipeline.git"
-   sh "echo unit test app"
+   sh "docker build ."
 }
 
 stage "test on supported OSes"
