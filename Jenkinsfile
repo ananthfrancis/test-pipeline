@@ -5,13 +5,10 @@ node {
    sh "docker build ."
 }
 
-stage "test on supported OSes"
+input message: 'Do you want to deploy in UAT', ok: 'Okay'
 
-parallel (
-  windows: { node {
-    sh "echo building on windows now"
-
- }},
-  mac: { node {
-    sh "echo building on mac now"
- }} )
+stage "UAT Deployment"
+node {
+   git "https://github.com/ananthfrancis/test-pipeline.git"
+   sh "docker build ."
+}
